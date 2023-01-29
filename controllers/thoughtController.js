@@ -45,7 +45,7 @@ module.exports = {
     },
     // Update a user
     updateThought(req, res) {
-        User.findOneAndUpdate({ _id: req.params.thoughtId }, req.body, { new: true })
+        Thought.findOneAndUpdate({ _id: req.params.thoughtId }, req.body, { new: true })
             .then((user) => res.json(user))
             .catch((err) => res.status(500).json(err));
     }
